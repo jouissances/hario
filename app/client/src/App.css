@@ -1,0 +1,14 @@
+/* Header CSS */
+nav {
+  display: flex;
+  justify-content: flex-end;
+}
+
+nav a {
+  padding: 0 15px;
+}
+
+/* Home Page CSS */
+.home {
+  text-transform: lowercase;
+}
