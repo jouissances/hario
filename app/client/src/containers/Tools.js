@@ -5,11 +5,11 @@ const Tools = props => {
     return (
         <div>
             {props.tools.map((tool, idx) => 
-            <div key={idx}>
+            <div key={idx} className='tool-wrapper'>
                 <h2>{tool.tool}</h2>
                 <p>{tool.short_description}</p>
 
-                <NavLink to={`/tools/${tool.id}`}>Try it!</NavLink>
+                <NavLink to={`/tools/${tool.id}`} className='tool-link'>Try it!</NavLink>
             </div>
             )}
         </div>

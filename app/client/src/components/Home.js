@@ -7,12 +7,15 @@ export default class Home extends Component {
 
     render() {
         return (
-            <div>
-                <h2 className='home'>Home</h2>
-                <h3 className='hero'>Your new personal trainer</h3>
+            <div className='home'>
+                <div className='home-wrapper'>
+                    <div className='hero-wrapper'>
+                        <h3 className='hero-text'>Your new
+                        <br/> personal trainer</h3>
 
-                <Link to='/about'>Read more about me...</Link>
-
+                        <Link to='/about' className='hero-link'>Read more about me...   <span className='hero-arrow'>&#8594;</span> </Link>
+                    </div>
+                </div>
                 <ToolsContainer/>
             </div>
     )}

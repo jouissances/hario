@@ -17,7 +17,10 @@ export default class ToolsContainer extends Component {
 
     render() {
         return (
-            <Tools tools={this.state.tools}/>
+            <div className='tools-container'>
+                <h1>Tools for You</h1>
+                <Tools tools={this.state.tools}/>
+            </div>
         )
     }
 }

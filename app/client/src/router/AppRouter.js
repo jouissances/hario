@@ -14,13 +14,16 @@ import Tool from '../containers/Tool';
 function AppRouter() {
     return (
         <Router>
-            <nav>
-                <Link to='/tools/'>Tools</Link>
-                <Link to='/'>Home</Link>
-                <Link to='/about/'>About</Link>
-                <Link to='/services'>Services</Link>
-                <Link to='/results'>Results</Link>
-                <Link to='/watchout/'>Community</Link>
+            <nav className='menu'>
+                {/* <div class='menu-item'><Link to='/'>Home</Link></div> */}
+                <div class='menu-item'><Link to='/about/'>About</Link></div>
+                <div class='menu-item'><Link to='/tools/'>Tools</Link></div>
+                <div class='menu-item'><Link to='/services'>Services</Link></div>
+                <div class='menu-item'><Link to='/results'>Results</Link></div>
+                <div class='menu-item'><Link to='/watchout/'>Community</Link></div>
+                
+                <div className='menu-label'><span></span></div>
+
             </nav>
 
             <Header/>

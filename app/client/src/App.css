@@ -1,14 +1,282 @@
-/* Header CSS */
-nav {
-  display: flex;
-  justify-content: flex-end;
+* {
+  box-sizing: border-box;
+  font-family: "Gilroy";
 }
 
-nav a {
-  padding: 0 15px;
+/* Navigation CSS */
+.menu {
+  display: flex;
+  justify-content: flex-end;
+  cursor: pointer;
+  pointer-events: none;
+  position: relative;
+  top: calc(2.25vh + 10px);
+  right: 25px;
+  z-index: 2;
+  color: white;
+}
+
+.menu:hover {
+  pointer-events: all;
+}
+
+.menu-label {
+  display: inline-block;
+  cursor: pointer;
+  pointer-events: all;
+  position: relative;
+  padding-right: 1.25em;
+}
+
+.menu-label:before {
+  content: "";
+  position: absolute;
+  right: 10px;
+  top: 0em;
+  width: 1em;
+  height: 0.15em;
+  box-shadow: 0 0.25em 0 0 white, 0 0.5em 0 0 white, 0 0.75em 0 0 white;
+}
+
+.menu-item {
+  position: relative;
+  display: inline-block;
+  top: 10px;
+  right: 15px;
+  opacity: 0;
+  transition: opacity 500ms ease, top 500ms ease;
+  transition-delay: 0;
+}
+
+.menu:visited .menu-item {
+  opacity: 1;
+  top: 0px;
+}
+
+.menu-item:hover a {
+  color: red;
+}
+
+.menu-item:nth-child(1) {
+  transition-delay: 100ms;
+}
+
+.menu-item:nth-child(2) {
+  transition-delay: 150ms;
+}
+
+.menu-item:nth-child(3) {
+  transition-delay: 200ms;
+}
+
+.menu-item:nth-child(4) {
+  transition-delay: 250ms;
+}
+
+.menu-item:nth-child(5) {
+  transition-delay: 300ms;
+}
+
+/* 
+.menu-item:nth-child(6) {
+  transition-delay: 450ms;
+} */
+
+.menu:hover .menu-item:nth-child(1) {
+  transition-delay: 400ms;
+}
+
+.menu:hover .menu-item:nth-child(2) {
+  transition-delay: 350ms;
+}
+
+.menu:hover .menu-item:nth-child(3) {
+  transition-delay: 300ms;
+}
+
+.menu:hover .menu-item:nth-child(4) {
+  transition-delay: 250ms;
+}
+
+.menu:hover .menu-item:nth-child(5) {
+  transition-delay: 200ms;
+}
+
+/* .menu:hover .menu-item:nth-child(6) {
+  transition-delay: 250ms;
+} */
+
+.menu a {
+  color: white;
+  text-decoration: none;
+  font-weight: 700;
+  margin: 0 10px;
+  transition: color 500ms ease-in;
+}
+
+/* Header CSS */
+.trainer-name a {
+  color: white;
+  font-weight: 700;
+  text-decoration: none;
+  position: relative;
+  top: 10px;
+  left: 25px;
+  z-index: 3;
+  transition: color 200ms ease-in;
+  transition-delay: 200ms;
+}
+
+.trainer-name a:hover {
+  color: red;
 }
 
 /* Home Page CSS */
-.home {
-  text-transform: lowercase;
+.home-wrapper {
+  background-image: url("./hero-image.jpg");
+  background-size: cover;
+  padding: 12.5vh 9vw;
+  position: relative;
+  top: -40px;
+  z-index: 1;
+}
+
+.hero-wrapper {
+  border: 1px solid red;
+  padding: 15vh 3vw 2.5vh 3vw;
+  width: 80vw;
+}
+
+.hero-text {
+  text-transform: uppercase;
+  font-size: 2.75rem;
+  color: white;
+}
+
+.hero-link {
+  position: relative;
+  top: -25px;
+  font-family: "Px Grotesk";
+  font-size: 0.9rem;
+  text-decoration: none;
+  color: white;
+}
+
+.hero-arrow {
+  margin-left: 15px;
+  vertical-align: -5%;
+  display: inline-block;
+  transform: scale(3, 0.75);
+}
+
+/* Tools Container CSS */
+.tools-container {
+  position: relative;
+  top: -15px;
+  margin: 0 7vw 7vh 7vw;
+}
+
+.tools-container h1 {
+  font-size: 2.5rem;
+}
+
+.tool-wrapper {
+  width: 38vw;
+  border: 3px solid black;
+  box-shadow: 0.5em 0.5em 0 0 red;
+  padding: 5px 25px 25px 25px;
+}
+
+.tool-wrapper h2 {
+  font-size: 1.25rem;
+  width: 75%;
+}
+
+.tool-link {
+  text-decoration: none;
+  font-weight: 700;
+  color: black;
+  text-decoration: underline;
+}
+
+/* Footer CSS */
+.footer-wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+  background-color: #333333;
+  padding-top: 15px;
+  padding-bottom: 50px;
+  position: relative;
+}
+
+.footer-left {
+  grid-column: 1 / 2;
+  margin-top: 12px;
+  margin-left: 5vw;
+}
+
+.footer-left p {
+  width: max-content;
+  padding: 10px 20px;
+  font-size: 0.75rem;
+  color: black;
+  background-color: white;
+  text-transform: uppercase;
+  font-weight: 700;
+  border: 3px solid black;
+  box-shadow: 0.5em 0.5em 0 0 black;
+}
+
+.footer-right {
+  grid-column: 2 / 4;
+}
+
+.footer-right h2 {
+  font-size: 1.4rem;
+  color: white;
+  margin-bottom: 30px;
+}
+
+.footer-right p {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #888888;
+}
+
+.footer-right ul {
+  list-style: none;
+}
+
+.footer-right li {
+  position: relative;
+  left: -40px;
+}
+
+.footer-right li a {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-decoration: underline;
+  color: white;
+}
+
+.footer-right .footer-social {
+  color: #888888;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.footer-right .footer-social span {
+  padding: 0 15px 0 0;
+}
+
+#me {
+  text-decoration: none;
+  color: #777777;
+  font-size: 0.75rem;
+  font-weight: 700;
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
 }

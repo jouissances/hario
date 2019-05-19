@@ -32,7 +32,7 @@ export default class Tool extends Component {
             tool: data
         }))
         .catch((errors) => {
-            console.log('errrrrror')
+            console.log(errors)
         })
     }
 

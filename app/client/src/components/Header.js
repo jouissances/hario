@@ -16,13 +16,13 @@ export default class Header extends Component {
             trainer: data[0]
         }))
         .catch((errors) => {
-            console.log('errrrrror')
+            console.log(errors)
         })
     }
 
     render() {
         return (
-            <div>
+            <div className='trainer-name'>
                 <Link to='/'>{this.state.trainer.name}</Link>
             </div>
     )}
