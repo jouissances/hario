@@ -13,7 +13,7 @@ export default class Home extends Component {
                         <h3 className='hero-text'>Your new
                         <br/> personal trainer</h3>
 
-                        <Link to='/about' className='hero-link'>Read more about me...   <span className='hero-arrow'>&#8594;</span> </Link>
+                        <Link to='/about' className='hero-link'>Read more about me  <span className='hero-arrow'>&#9658;</span> </Link>
                     </div>
                 </div>
                 <ToolsContainer/>

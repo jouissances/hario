@@ -16,11 +16,11 @@ function AppRouter() {
         <Router>
             <nav className='menu'>
                 {/* <div class='menu-item'><Link to='/'>Home</Link></div> */}
-                <div class='menu-item'><Link to='/about/'>About</Link></div>
-                <div class='menu-item'><Link to='/tools/'>Tools</Link></div>
-                <div class='menu-item'><Link to='/services'>Services</Link></div>
-                <div class='menu-item'><Link to='/results'>Results</Link></div>
-                <div class='menu-item'><Link to='/watchout/'>Community</Link></div>
+                <div className='menu-item'><Link to='/about/'>About</Link></div>
+                <div className='menu-item'><Link to='/tools/'>Tools</Link></div>
+                <div className='menu-item'><Link to='/services'>Services</Link></div>
+                <div className='menu-item'><Link to='/results'>Results</Link></div>
+                <div className='menu-item'><Link to='/watchout/'>Community</Link></div>
                 
                 <div className='menu-label'><span></span></div>
 
