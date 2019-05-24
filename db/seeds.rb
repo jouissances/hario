@@ -8,7 +8,7 @@
 
 trainer = Trainer.create({
     name: 'Harrison Oldridge',
-    description: 'I was born in Australia and raised in Hong Kong. I have always loved a wide variety of sports including rugby, boxing, rowing and gymnastics. Having been a trainer in the industry for over 10 years now, I’ve been fortunate to work with a range of clients with different goals and learn from some of the best and brightest in the industry. I moved to Singapore 3 years ago to help manage Bukit Timah and South Buona Vista and I’ve been having an absolute blast ever since. I love Singapore, f45 and all the amazing people I get to work with since joining!',
+    description: 'I was born in Australia and raised in Hong Kong. I have always loved a wide variety of sports including rugby, boxing, rowing and gymnastics. Having been a trainer in the industry for over 10 years now, I’ve been fortunate to work with a range of clients with different goals and learn from some of the best and brightest in the industry. I moved to Singapore 3 years ago to help manage Bukit Timah and South Buona Vista and I’ve been having an absolute blast ever since. I love Singapore, F45 and all the amazing people I get to work with since joining!',
     email: 'harrisonoldridge1@gmail.com',
     phone: '+65 8888 9999',
     facebook: 'HariOldridge',
@@ -45,15 +45,6 @@ tools = Tool.create([{
     short_description: "How do you know how much carbohydrates, protein, or fats to consume in order to lose weight? Use this calculator to find out!",
     long_description: "What are macros? Each of the foods we eat are made up of 3 “macros”. These macros are carbohydrate (carbs), protein, and fat. Chicken is high in the protein macro but has no carbs. Rice is high in carbs, but very little fat or protein. This calculator tells you the best ratio of macros that you should eat to achieve your goals. From there, you need to determine the macros of all the foods you eat. By counting them each day, you can reach a target that leads to fat loss. Macro counting can free you from the “good food, bad food” mindset. You don’t need to make radical shifts in your diet, nor deprive yourself of your favorite foods. Just make sure you are within your macro counts for each day, and you’re good to go! For now, complete the following questions and find out more about your macro needs.",
     trainer_id: 1
-}])
-
-logs = Log.create([{
-    age: 28,
-    sex: 'Female',
-    current_weight: 55,
-    current_height: 150,
-    activity_level: 'Moderate',
-    current_goal: 'Lose Weight'
 }])
 
     # t.integer :age
