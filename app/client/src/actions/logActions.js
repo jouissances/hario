@@ -1,8 +1,6 @@
-let results;
-
 export function fetchResults(newLog) {
     return (dispatch) => {
-        fetch(`/api/logs/`, {
+        fetch(`http://localhost:3001/api/logs/`, {
             method: 'post',
             headers: {
                 'Accept': 'application/json',
@@ -12,25 +10,13 @@ export function fetchResults(newLog) {
         })
         .then(response => response.json())
         .then(data => {
-            // debugger
-            showResults(data['id'])
-            dispatch(fetchResultsSuccess(results))
-            // debugger
+            fetch(`http://localhost:3001/api/logs/${data['id']}`)
+            .then(response => response.json())
+            .then(data => dispatch(fetchResultsSuccess(data['results'])))
+            .catch(error => console.log(error))
         })
-        // debugger
         .catch(error => dispatch(fetchResultsFailure(error)))
     }
-}
-
-function showResults(id) {
-    // if (id !== undefined) {
-        fetch(`/api/logs/${id}`)
-        .then(response => response.json())
-        .then(data => results = data['results'])
-        .catch(error => console.log(error))
-        // debugger
-    // }
-    return results
 }
 
 export const FETCH_RESULTS_SUCCESS = 'FETCH_RESULTS_SUCCESS';
