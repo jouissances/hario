@@ -1,6 +1,24 @@
 import React, { Component } from 'react';
 
 export default class Footer extends Component {
+    constructor(props) {
+        super(props)
+        this.state = {
+            trainer: ''
+        }
+    }
+
+    componentDidMount() {
+        fetch(`http://localhost:3001/api/trainers`)
+        .then(response => response.json())
+        .then(data => this.setState({
+            trainer: data[0]
+        }))
+        .catch((errors) => {
+            console.log(errors)
+        })
+    }
+
     render() {
         return (
             <div className='footer-wrapper'>
@@ -15,8 +33,8 @@ export default class Footer extends Component {
                     <p>Start a Conversation</p>
 
                     <ul className='footer-contact'>
-                        <li><a href='mailto:harrisonxxx@gmail.com'>harrisonxxx@gmail.com</a></li>
-                        <li><a href='tel:6588889999'>+65 8888 9999</a></li>
+                        <li><a href={`mailto:${this.state.trainer.email}`}>{this.state.trainer.email}</a></li>
+                        <li><a href={`tel:${this.state.trainer.phone}`}>{this.state.trainer.phone}</a></li>
                     </ul>
 
                     <div className='footer-social'>
