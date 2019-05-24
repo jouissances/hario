@@ -11,7 +11,7 @@ export default class ToolsContainer extends Component {
             tools: data
         }))
         .catch((errors) => {
-            console.log('errrrrror')
+            console.log(errors)
         })
     }
 
