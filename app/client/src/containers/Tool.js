@@ -16,7 +16,7 @@ export default class Tool extends Component {
     }
 
     componentDidMount() {
-        fetch(`/api/tools`)
+        fetch(`http://localhost:3001/api/tools`)
         .then(response => response.json())
         .then(data => {
             this.getTool(data[0].id)
@@ -27,7 +27,7 @@ export default class Tool extends Component {
     }
 
     getTool(id) {
-        fetch(`/api/tools/${id}`)
+        fetch(`http://localhost:3001/api/tools/${id}`)
         .then(response => response.json())
         .then(data => this.setState({
             tool: data
@@ -41,7 +41,7 @@ export default class Tool extends Component {
         if (this.state.tool.tool) {
             const type = this.state.tool.tool.split(' ').join('')
             const ComponentName = Components[type]
-            return <ComponentName />
+            return <ComponentName title={type} />
         }
     }
 

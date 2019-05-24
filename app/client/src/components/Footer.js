@@ -9,7 +9,7 @@ export default class Footer extends Component {
     }
 
     componentDidMount() {
-        fetch(`/api/trainers`)
+        fetch(`http://localhost:3001/api/trainers`)
         .then(response => response.json())
         .then(data => this.setState({
             trainer: data[0]
