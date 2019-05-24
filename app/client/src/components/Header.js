@@ -10,7 +10,7 @@ export default class Header extends Component {
     }
 
     componentDidMount() {
-        fetch(`http://localhost:3001/api/trainers`)
+        fetch(`/api/trainers`)
         .then(response => response.json())
         .then(data => this.setState({
             trainer: data[0]

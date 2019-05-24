@@ -2,7 +2,7 @@ let results;
 
 export function fetchResults(newLog) {
     return (dispatch) => {
-        fetch(`http://localhost:3001/api/logs/`, {
+        fetch(`/api/logs/`, {
             method: 'post',
             headers: {
                 'Accept': 'application/json',
@@ -24,7 +24,7 @@ export function fetchResults(newLog) {
 
 function showResults(id) {
     // if (id !== undefined) {
-        fetch(`http://localhost:3001/api/logs/${id}`)
+        fetch(`/api/logs/${id}`)
         .then(response => response.json())
         .then(data => results = data['results'])
         .catch(error => console.log(error))

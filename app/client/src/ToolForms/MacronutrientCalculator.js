@@ -6,6 +6,7 @@ class MacronutrientCalculator extends Component {
     constructor(props) {
         super(props)
         this.state = {
+            step: 0,
             age: '29',
             sex: 'male',
             current_weight: '88',
@@ -13,14 +14,26 @@ class MacronutrientCalculator extends Component {
             activity_level: 'sedentary',
             current_goal: 'maintain',
             loading: false,
-            error: null
-            // results: ''
+            error: null,
+            results: ''
         }
     }
 
     handleChange = event => {
         this.setState({
             [event.target.name]: event.target.value
+        })
+    }
+
+    nextStep = () => {
+        this.setState({
+            step: this.state.step + 1
+        })
+    }
+
+    prevStep = () => {
+        this.setState({
+            step: this.state.step - 1
         })
     }
 
@@ -37,6 +50,14 @@ class MacronutrientCalculator extends Component {
     }
 
     render() {
+        // switch(this.state.step) {
+        //     case 0:
+        //     return (
+        //         <form>
+
+        //         </form>
+        //     )
+        // }
         return (
             <form onSubmit={(event) => this.handleSubmit(event)}>
                 <label htmlFor='age'>What is your age? </label>
@@ -72,7 +93,7 @@ class MacronutrientCalculator extends Component {
                     <option value='gain'>Gain Weight</option>
                 </select> <br/>
 
-                <p>{this.props.results}</p>
+                <p className='results'>{this.props.results}</p>
 
                 <input type='submit'/>
 
