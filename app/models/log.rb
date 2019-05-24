@@ -40,7 +40,7 @@ class Log < ActiveRecord::Base
         fats_intake = ((goal_tdee * 0.25) / 9).round
         carbohydrates_intake = ((goal_tdee - (fats_intake * 9) - (protein_intake * 4)) / 4).round
 
-        self.results << "After further calculations, your recommended macros are calculated to be #{protein_intake}g of protein, #{fats_intake}g of fats, and #{carbohydrates_intake} of carbohydrates. "
+        self.results << "After further calculations, your recommended macros are calculated to be #{protein_intake}g of protein, #{fats_intake}g of fats, and #{carbohydrates_intake}g of carbohydrates. "
     end
 
     # t.integer :age
