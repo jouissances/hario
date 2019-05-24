@@ -1,24 +1,20 @@
-# README
+# hario.fit
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a sample personal website for a personal trainer. Its unique feature includes free fitness tools, such as a personalised macronutrient calculator.
 
-Things you may want to cover:
+## Usage
 
-* Ruby version
+No installation required. Clone project to local machine and do the following:
 
-* System dependencies
+1. From the root folder, run `rails s -p 3001`
+2. Change directory to app/client using `cd app/client` and run `npm install && npm start`
 
-* Configuration
+Feel free to create your pull requests.
 
-* Database creation
+## License
 
-* Database initialization
+The application is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
 
-* How to run the test suite
+## Contributing
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Bug reports and pull requests are welcome on GitHub. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org/) code of conduct.
