@@ -2,34 +2,26 @@
 
 ## There should be 2 container components
 
-[] Harrison
-[] Tools
-[] User Input (Logs)
+[x] ToolContainer
+[x] ToolsContainer
 
 ## There should be 5 stateless components
 
-[] Header
-[] Menu
-[] Homepage
-[] About
-[] Footer
-[] _Coming Soon_
+[x] Header
+[x] Homepage
+[x] Tools
+[x] Services
+[x] _Coming Soon_
 
 ## There should be 3 routes
 
-[] test
-[] test
-[] test
+[x] Homepage
+[x] About
+[x] Tools
+[x] Services
+[x] Client
+[x] Watchout
 
 ## Must make use of Rails API at the backend
 
-[] Rails models: - Harrison - Tools - User Input (Logs)
-
-# Construct
-
-[] Parent: Tools
-[] Child (L1): Tool (e.g. Macro Calculator)
-[] Child (L2): User Input (Logs)
-
-[] Parent: Harrison
-[] Child (L1): Harrison's Details
+[x] Rails models: - Harrison - Tools - User Input (Logs)
