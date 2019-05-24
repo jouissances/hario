@@ -1,0 +1,22 @@
+{
+  "name": "hario",
+  "version": "1.0.0",
+  "description": "This is a sample personal website for a personal trainer. Its unique feature includes free fitness tools, such as a personalised macronutrient calculator.",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jouissances/hario.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jouissances/hario/issues"
+  },
+  "homepage": "https://github.com/jouissances/hario#readme"
+}
