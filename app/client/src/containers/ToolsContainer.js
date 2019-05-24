@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Tools from './Tools';
+import Tools from '../components/Tools';
 
 export default class ToolsContainer extends Component {
     state = { tools: [] }
