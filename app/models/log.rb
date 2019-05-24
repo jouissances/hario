@@ -1,6 +1,6 @@
 class Log < ActiveRecord::Base
 
-    def calculate_macros
+    def macronutrient_calculator
         self.results = ''
         ree = (current_weight * 10) + (current_height * 6.25) - (age * 5)
 

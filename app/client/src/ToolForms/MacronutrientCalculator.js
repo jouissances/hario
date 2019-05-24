@@ -6,7 +6,7 @@ class MacronutrientCalculator extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            step: 0,
+            // step: 0,
             age: '29',
             sex: 'male',
             current_weight: '88',
@@ -15,6 +15,7 @@ class MacronutrientCalculator extends Component {
             current_goal: 'maintain',
             loading: false,
             error: null,
+            tool: this.props.title,
             results: ''
         }
     }
@@ -25,17 +26,17 @@ class MacronutrientCalculator extends Component {
         })
     }
 
-    nextStep = () => {
-        this.setState({
-            step: this.state.step + 1
-        })
-    }
+    // nextStep = () => {
+    //     this.setState({
+    //         step: this.state.step + 1
+    //     })
+    // }
 
-    prevStep = () => {
-        this.setState({
-            step: this.state.step - 1
-        })
-    }
+    // prevStep = () => {
+    //     this.setState({
+    //         step: this.state.step - 1
+    //     })
+    // }
 
     handleSubmit = event => {
         event.preventDefault()
@@ -45,19 +46,12 @@ class MacronutrientCalculator extends Component {
             current_weight: this.state.current_weight,
             current_height: this.state.current_height,
             activity_level: this.state.activity_level,
-            current_goal: this.state.current_goal
+            current_goal: this.state.current_goal,
+            tool: this.state.tool
         }))
     }
 
     render() {
-        // switch(this.state.step) {
-        //     case 0:
-        //     return (
-        //         <form>
-
-        //         </form>
-        //     )
-        // }
         return (
             <form onSubmit={(event) => this.handleSubmit(event)}>
                 <label htmlFor='age'>What is your age? </label>

@@ -8,6 +8,7 @@ class CreateLogs < ActiveRecord::Migration[5.2]
       t.string :activity_level
       t.string :current_goal
       t.text :results
+      t.string :tool
       t.timestamps
     end
   end

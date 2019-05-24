@@ -34,6 +34,7 @@ ActiveRecord::Schema.define(version: 2019_05_10_074653) do
     t.string "activity_level"
     t.string "current_goal"
     t.text "results"
+    t.string "tool"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

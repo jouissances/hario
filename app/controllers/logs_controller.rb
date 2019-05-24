@@ -1,3 +1,5 @@
+require 'active_support/core_ext/string/inflections.rb'
+
 class LogsController < APIController
     def index
         @logs = Log.order(:created_at)
@@ -6,7 +8,8 @@ class LogsController < APIController
 
     def show
         @log = Log.find(params[:id])
-        @log.calculate_macros
+        @tool = @log.tool.underscore
+        @log.send(@tool)
         render json: @log
     end
 
@@ -18,7 +21,7 @@ class LogsController < APIController
     private
 
     def log_params
-        params.require(:log).permit(:age, :sex, :current_weight, :current_height, :activity_level, :current_goal, :results, :created_at, :updated_at)
+        params.require(:log).permit(:age, :sex, :current_weight, :current_height, :activity_level, :current_goal, :results, :tool, :created_at, :updated_at)
     # t.integer :age
     # t.string :sex
     # t.integer :current_weight
