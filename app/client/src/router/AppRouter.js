@@ -9,7 +9,7 @@ import Services from '../components/Services';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import ToolsContainer from '../containers/ToolsContainer';
-import Tool from '../containers/Tool';
+import ToolContainer from '../containers/ToolContainer';
 
 function AppRouter() {
     return (
@@ -35,7 +35,7 @@ function AppRouter() {
             <Route path='/results' exact component={Results}/>
             <Route path='/watchout/' exact component={Watchout}/>
 
-            <Route path='/tools/:id' component={Tool}/>
+            <Route path='/tools/:id' component={ToolContainer}/>
 
             <Footer/>
         </Router>
