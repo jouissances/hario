@@ -1,22 +1,10 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { fetchTrainer } from '../actions/trainerActions';
 
-export default class Footer extends Component {
-    constructor(props) {
-        super(props)
-        this.state = {
-            trainer: ''
-        }
-    }
-
+class Footer extends Component {
     componentDidMount() {
-        fetch(`http://localhost:3001/api/trainers`)
-        .then(response => response.json())
-        .then(data => this.setState({
-            trainer: data[0]
-        }))
-        .catch((errors) => {
-            console.log(errors)
-        })
+        this.props.dispatch(fetchTrainer())
     }
 
     render() {
@@ -33,14 +21,14 @@ export default class Footer extends Component {
                     <p>Start a Conversation</p>
 
                     <ul className='footer-contact'>
-                        <li><a href={`mailto:${this.state.trainer.email}`}>{this.state.trainer.email}</a></li>
-                        <li><a href={`tel:${this.state.trainer.phone}`}>{this.state.trainer.phone}</a></li>
+                        <li><a href={`mailto:${this.props.trainer.email}`}>{this.props.trainer.email}</a></li>
+                        <li><a href={`tel:${this.props.trainer.phone}`}>{this.props.trainer.phone}</a></li>
                     </ul>
 
                     <div className='footer-social'>
-                        <span>FB</span>
-                        <span>IG</span>
-                        <span>LI</span>
+                        <span><a href={`http://facebook.com/${this.props.trainer.facebook}`}>FB</a></span>
+                        <span><a href={`http://instagram.com/${this.props.trainer.instagram}`}>IG</a></span>
+                        <span><a href={`http://linkedin.com/in/${this.props.trainer.linkedin}`}>LI</a></span>
                     </div>
 
                     <a href='https://janicedarikho.com/' id='me'>Love the hustle.</a>
@@ -48,3 +36,11 @@ export default class Footer extends Component {
             </div>
     )}
 }
+
+const mapStateToProps = state => ({
+    trainer: state.trainer.trainer,
+    loading: state.trainer.loading,
+    error: state.trainer.error
+})
+
+export default connect(mapStateToProps)(Footer)

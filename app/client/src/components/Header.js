@@ -1,29 +1,25 @@
 import React, { Component } from 'react';
 import { Link } from '../../node_modules/react-router-dom';
+import { fetchTrainer } from '../actions/trainerActions';
+import { connect } from 'react-redux';
 
-export default class Header extends Component {
-    constructor(props) {
-        super(props)
-        this.state = {
-            trainer: ''
-        }
-    }
-
+class Header extends Component {
     componentDidMount() {
-        fetch(`http://localhost:3001/api/trainers`)
-        .then(response => response.json())
-        .then(data => this.setState({
-            trainer: data[0]
-        }))
-        .catch((errors) => {
-            console.log(errors)
-        })
+        this.props.dispatch(fetchTrainer())
     }
 
     render() {
         return (
             <div className='trainer-name'>
-                <Link to='/'>{this.state.trainer.name}</Link>
+                <Link to='/'>{this.props.trainer.name}</Link>
             </div>
     )}
 }
+
+const mapStateToProps = state => ({
+    trainer: state.trainer.trainer,
+    loading: state.trainer.loading,
+    error: state.trainer.error
+})
+
+export default connect(mapStateToProps)(Header)
