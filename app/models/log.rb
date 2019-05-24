@@ -27,11 +27,11 @@ class Log < ActiveRecord::Base
 
         case current_goal
         when 'maintain'
-            goal_tdee = tdee
+            goal_tdee = tdee.round
         when 'lose'
-            goal_tdee = tdee * 0.8
+            goal_tdee = (tdee * 0.8).round
         when 'gain'
-            goal_tdee = tdee * 1.2
+            goal_tdee = (tdee * 1.2).round
         end
 
         self.results << "In order to #{current_goal} weight, you have to eat approximately #{goal_tdee} calories per day. "
