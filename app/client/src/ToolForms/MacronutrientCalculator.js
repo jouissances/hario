@@ -7,10 +7,10 @@ class MacronutrientCalculator extends Component {
         super(props)
         this.state = {
             // step: 0,
-            age: '29',
-            sex: 'male',
-            current_weight: '88',
-            current_height: '183',
+            age: '',
+            sex: '',
+            current_weight: '',
+            current_height: '',
             activity_level: 'sedentary',
             current_goal: 'maintain',
             loading: false,
