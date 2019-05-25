@@ -2,14 +2,14 @@
   font-family: "Gilroy";
   font-style: normal;
   font-weight: 400;
-  src: url("../public/fonts/Gilroy-Regular.ttf");
+  src: url("../public/fonts/Gilroy-Regular.ttf") format("truetype");
 }
 
 @font-face {
   font-family: "Gilroy";
   font-style: normal;
   font-weight: 700;
-  src: url("../public/fonts/Gilroy-Bold.ttf");
+  src: url("../public/fonts/Gilroy-Bold.ttf") format ("truetype");
 }
 
 * {
@@ -320,7 +320,7 @@ select {
 }
 
 .footer-left p {
-  width: min-content;
+  width: max-content;
   padding: 10px 20px;
   font-size: 0.75rem;
   color: black;
