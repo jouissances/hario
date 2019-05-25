@@ -184,6 +184,12 @@
   transform: scale(0.5, 0.5);
 }
 
+@media only screen and (max-width: 400px) {
+  .home-wrapper {
+    background-position-x: center;
+  }
+}
+
 /* Tools Container CSS */
 .tools-container {
   position: relative;
@@ -212,6 +218,12 @@
   font-weight: 700;
   color: black;
   text-decoration: underline;
+}
+
+@media only screen and (max-width: 400px) {
+  .tool-wrapper {
+    width: 80vw;
+  }
 }
 
 /* Tool Page CSS */
@@ -370,6 +382,17 @@ select {
 
 .footer-social a:hover {
   color: white;
+}
+
+@media only screen and (max-width: 400px) {
+  .footer-left {
+    display: none;
+  }
+
+  .footer-wrapper {
+    display: inline-block;
+    padding: 10px 30px 50px 30px;
+  }
 }
 
 #me {
