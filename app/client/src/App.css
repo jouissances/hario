@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css?family=Rubik:400,700&display=swap");
+
 @font-face {
   font-family: "Gilroy";
   font-style: normal;
@@ -14,7 +16,7 @@
 
 * {
   box-sizing: border-box;
-  font-family: "Gilroy";
+  font-family: "Rubik";
 }
 
 /* Navigation CSS */
@@ -184,7 +186,7 @@
   transform: scale(0.5, 0.5);
 }
 
-@media only screen and (min-width: 400px) {
+@media only screen and (max-width: 400px) {
   .home-wrapper {
     background-position-x: center;
   }
@@ -220,7 +222,7 @@
   text-decoration: underline;
 }
 
-@media only screen and (min-width: 400px) {
+@media only screen and (max-width: 400px) {
   .tool-wrapper {
     width: 80vw;
   }
@@ -384,7 +386,7 @@ select {
   color: white;
 }
 
-@media only screen and (min-width: 400px) {
+@media only screen and (max-width: 400px) {
   .footer-left {
     display: none;
   }
