@@ -1,6 +1,6 @@
 export function fetchTrainer() {
     return (dispatch) => {
-        fetch(`http://localhost:3001/api/trainers`)
+        fetch(`/api/trainers`)
         .then(response => response.json())
         .then(data => dispatch(fetchTrainerSuccess(data[0])))
         .catch(error => dispatch(fetchTrainerFailure(error)))

@@ -16,7 +16,7 @@ export default class ToolContainer extends Component {
     }
 
     componentDidMount() {
-        fetch(`http://localhost:3001/api/tools`)
+        fetch(`/api/tools`)
         .then(response => response.json())
         .then(data => {
             this.getTool(data[0].id)
@@ -27,7 +27,7 @@ export default class ToolContainer extends Component {
     }
 
     getTool(id) {
-        fetch(`http://localhost:3001/api/tools/${id}`)
+        fetch(`/api/tools/${id}`)
         .then(response => response.json())
         .then(data => this.setState({
             tool: data

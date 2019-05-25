@@ -5,7 +5,7 @@ export default class ToolsContainer extends Component {
     state = { tools: [] }
 
     componentDidMount() {
-        fetch(`http://localhost:3001/api/tools`)
+        fetch(`/api/tools`)
         .then(response => response.json())
         .then(data => this.setState({
             tools: data

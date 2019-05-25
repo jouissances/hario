@@ -1,6 +1,6 @@
 export function fetchResults(newLog) {
     return (dispatch) => {
-        fetch(`http://localhost:3001/api/logs/`, {
+        fetch(`/api/logs/`, {
             method: 'post',
             headers: {
                 'Accept': 'application/json',
@@ -10,7 +10,7 @@ export function fetchResults(newLog) {
         })
         .then(response => response.json())
         .then(data => {
-            fetch(`http://localhost:3001/api/logs/${data['id']}`)
+            fetch(`/api/logs/${data['id']}`)
             .then(response => response.json())
             .then(data => dispatch(fetchResultsSuccess(data['results'])))
             .catch(error => console.log(error))

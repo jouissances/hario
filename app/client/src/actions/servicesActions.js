@@ -1,6 +1,6 @@
 export function fetchServices() {
     return (dispatch) => {
-        fetch(`http://localhost:3001/api/services`)
+        fetch(`/api/services`)
         .then(response => response.json())
         .then(data => dispatch(fetchServicesSuccess(data)))
         .catch(error => dispatch(fetchServicesFailure(error)))
