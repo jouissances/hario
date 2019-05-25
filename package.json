@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/jouissances/hario/issues"
   },
-  "homepage": "https://github.com/jouissances/hario#readme"
+  "homepage": "https://github.com/jouissances/hario#readme",
+  "dependencies": {
+    "http-proxy-middleware": "^0.19.1"
+  }
 }
