@@ -184,7 +184,7 @@
   transform: scale(0.5, 0.5);
 }
 
-@media only screen and (max-width: 400px) {
+@media only screen and (min-width: 400px) {
   .home-wrapper {
     background-position-x: center;
   }
@@ -220,7 +220,7 @@
   text-decoration: underline;
 }
 
-@media only screen and (max-width: 400px) {
+@media only screen and (min-width: 400px) {
   .tool-wrapper {
     width: 80vw;
   }
@@ -320,7 +320,7 @@ select {
 }
 
 .footer-left p {
-  width: max-content;
+  width: min-content;
   padding: 10px 20px;
   font-size: 0.75rem;
   color: black;
@@ -384,7 +384,7 @@ select {
   color: white;
 }
 
-@media only screen and (max-width: 400px) {
+@media only screen and (min-width: 400px) {
   .footer-left {
     display: none;
   }
